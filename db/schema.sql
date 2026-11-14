@@ -63,7 +63,7 @@ CREATE TABLE audit_log (
   user_id INT,
   action TEXT NOT NULL,
   detail TEXT,
-  at TIMESTAMPTZ NOT NULL DEFAULT now()
+  at TIMESTAMPTS NOT NULL DEFAULT now()
 );
 
 CREATE INDEX idx_units_stock ON blood_units (status, component, blood_group, expiry_on);
